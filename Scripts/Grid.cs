@@ -22,6 +22,12 @@ public class Grid : MonoBehaviour
         CreateGrid();
     }
 
+    public int MaxSize {
+		get {
+			return gridSizeX * gridSizeY;
+		}
+	}
+
     void CreateGrid(){
         grid = new Node[gridSizeX,gridSizeY];
         Vector2 worldBottomLeft = new Vector2(transform.position.x, transform.position.y) - Vector2.right * gridWorldSize.x/2 - Vector2.up * gridWorldSize.y/2;
